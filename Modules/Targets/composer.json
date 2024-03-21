@@ -1,0 +1,23 @@
+{
+    "name": "nwidart/targets",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Targets\\Providers\\TargetsServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Targets\\": "Modules/Targets/"
+        }
+    }
+}
