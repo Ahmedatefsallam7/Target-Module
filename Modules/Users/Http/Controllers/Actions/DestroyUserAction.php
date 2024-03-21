@@ -6,7 +6,7 @@ use Modules\Users\Entities\User;
 
 class DestroyUserAction
 {
-    function execute($id)
+    public function execute($id)
     {
         // Get user and delete
         User::destroy($id);
@@ -15,4 +15,3 @@ class DestroyUserAction
         return true;
     }
 }
-#

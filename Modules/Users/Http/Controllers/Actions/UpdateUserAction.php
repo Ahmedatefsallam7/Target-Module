@@ -7,15 +7,15 @@ use Modules\Users\Transformers\UserResource;
 
 class UpdateUserAction
 {
-    function execute($data)
+    function execute(array $data)
     {
         // Get user
         $user = User::find($data['id']);
 
-        // update user
+        // Update user data
         $user->update($data);
 
-        // return
+        // Return updated user resource
         return new UserResource($user);
     }
 }

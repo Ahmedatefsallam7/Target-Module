@@ -6,7 +6,7 @@ use Modules\Users\Entities\User;
 
 class SearchUserQueryAction
 {
-    function execute($request)
+    public function execute($request)
     {
         // Get Users
         $users = User::query();

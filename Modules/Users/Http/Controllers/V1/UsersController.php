@@ -19,11 +19,7 @@ use Modules\Users\Http\Controllers\Actions\SearchUserQueryAction;
 class UsersController extends Controller
 {
     use GeneralTrait;
-    private $searchUserQueryAction;
-    private $storeUserAction;
-    private $getUserByIdAction;
-    private $updateUserAction;
-    private $destroyUserAction;
+    private $userActions;
 
     public function __construct(
         SearchUserQueryAction $searchUserQueryAction,
@@ -32,16 +28,18 @@ class UsersController extends Controller
         UpdateUserAction $updateUserAction,
         DestroyUserAction $destroyUserAction
     ) {
-        $this->searchUserQueryAction = $searchUserQueryAction;
-        $this->storeUserAction = $storeUserAction;
-        $this->getUserByIdAction = $getUserByIdAction;
-        $this->updateUserAction = $updateUserAction;
-        $this->destroyUserAction = $destroyUserAction;
+        $this->userActions = [
+            'search' => $searchUserQueryAction,
+            'store' => $storeUserAction,
+            'getById' => $getUserByIdAction,
+            'update' => $updateUserAction,
+            'destroy' => $destroyUserAction
+        ];
     }
 
     public function index(Request $request)
     {
-        $users = $this->searchUserQueryAction->execute($request);
+        $users = $this->userActions['search']->execute($request);
 
         $data = DataTables::of($users)
             ->addColumn('created_at', function ($user) {
@@ -57,7 +55,7 @@ class UsersController extends Controller
     {
         $data = $this->unsetNullValues($request->all());
 
-        $user = $this->storeUserAction->execute($data);
+        $user = $this->userActions['store']->execute($data);
 
         $record = Str::plural('record', $user);
 
@@ -66,7 +64,7 @@ class UsersController extends Controller
 
     public function show(GetUserByIdRequest $request)
     {
-        $user = $this->getUserByIdAction->execute($request->id);
+        $user = $this->userActions['getById']->execute($request->id);
 
         return $this->successResponse(__('main.record_has_been_retrieved_successfully'), $user);
     }
@@ -75,14 +73,14 @@ class UsersController extends Controller
     {
         $data = $this->unsetNullValues($request->all());
 
-        $user = $this->updateUserAction->execute($data);
+        $user = $this->userActions['update']->execute($data);
 
         return $this->successResponse(__('main.record_has_been_updated_successfully'), $user);
     }
 
     public function destroy(GetUserByIdRequest $request, $id)
     {
-        $this->destroyUserAction->execute($request->id);
+        $this->userActions['destroy']->execute($request->id);
 
         return $this->successResponse(__('main.record_has_been_deleted_successfully'), null);
     }

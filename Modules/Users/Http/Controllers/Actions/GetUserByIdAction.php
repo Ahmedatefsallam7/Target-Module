@@ -6,7 +6,7 @@ use Modules\Users\Entities\User;
 
 class GetUserByIdAction
 {
-    function execute($id)
+    public function execute($id)
     {
         // Get User
         $user = User::with([
