@@ -4,23 +4,22 @@ namespace Modules\Users\Http\Requests\Users;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class GetUserByIdRequest extends FormRequest
-{
+class GetUserByIdRequest extends FormRequest {
     /**
-     * Get the validation rules that apply to the request.
-     */
-    public function rules(): array
-    {
+    * Get the validation rules that apply to the request.
+    */
+
+    public function rules(): array {
         return [
-            "id" => 'required|integer|exists:users,id',
+            'id' => 'required|integer|exists:users,id,deleted_at,NULL',
         ];
     }
 
     /**
-     * Determine if the user is authorized to make this request.
-     */
-    public function authorize(): bool
-    {
+    * Determine if the user is authorized to make this request.
+    */
+
+    public function authorize(): bool {
         return true;
     }
 }

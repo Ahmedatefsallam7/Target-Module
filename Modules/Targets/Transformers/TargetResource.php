@@ -18,7 +18,7 @@ class TargetResource extends Resource
         return [
             "id" => $this->id,
             "user_id" => $this->user_id,
-            "title" => $this->title,
+            "subject" => $this->subject,
             "description" => $this->description,
             "type" => $this->type,
             "duration" => $this->duration,

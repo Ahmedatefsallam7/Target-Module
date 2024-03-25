@@ -19,13 +19,13 @@ class StoreTargetAction
             foreach ($data['targets'] as $targetData) {
                 $newTarget = Target::create([
                     "user_id" => $targetData["user_id"],
-                    "title" => $targetData["title"],
+                    "subject" => $targetData["subject"],
                     "description" => $targetData["description"],
                     "type" => $targetData["type"],
                     "duration" => $targetData["duration"],
                     "amount" => $targetData["amount"],
                     "start_date" => $targetData["start_date"],
-                    "end_date" => $targetData["end_date"],
+                    "end_date" => $targetData["end_date"] ?? null,
                 ]);
 
                 // Create target achievement

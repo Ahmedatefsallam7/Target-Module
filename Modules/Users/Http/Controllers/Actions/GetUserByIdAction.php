@@ -4,23 +4,21 @@ namespace Modules\Users\Http\Controllers\Actions;
 
 use Modules\Users\Entities\User;
 
-class GetUserByIdAction
-{
-    public function execute($id)
-    {
+class GetUserByIdAction {
+    public function execute( $id ) {
         // Get User
-        $user = User::with([
+        $user = User::with( [
             'targets',
-            'target_achievements' => function ($q) {
-                return $q->where('is_completed', 1);
+            'target_achievements' => function ( $q ) {
+                return $q->where( 'percentage', 100 );
             }
-        ])->withCount([
+        ] )->withCount( [
             'targets',
-            'target_achievements' => function ($q) {
-                return $q->where('is_completed', 1);
+            'target_achievements' => function ( $q ) {
+                return $q->where( 'percentage', 100 );
             }
-        ])
-            ->find($id);
+        ] )
+        ->find( $id );
 
         // return
         return $user;

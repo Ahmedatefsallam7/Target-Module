@@ -23,14 +23,11 @@ class UpdateTargetAchievementAction
         // Calculate the percentage of achievement
         $percentage = min(100, number_format(($achievedAmount / $targetAmount) * 100, 2));
 
-        // Check if the achievement is completed
-        $isCompleted = $totalAchievedAmount >= $targetAmount;
 
         // Prepare data for update
         $updateData = [
             'achieved_amount' => $achievedAmount,
             'percentage' => $percentage,
-            'is_completed' => $isCompleted
         ];
 
         // Update the achievement with the new data

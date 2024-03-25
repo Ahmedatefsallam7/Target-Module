@@ -36,7 +36,6 @@ class UsersController extends Controller
             'destroy' => $destroyUserAction
         ];
     }
-
     public function index(Request $request)
     {
         $users = $this->userActions['search']->execute($request);

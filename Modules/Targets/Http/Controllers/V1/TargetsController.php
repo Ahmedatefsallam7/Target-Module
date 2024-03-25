@@ -40,11 +40,11 @@ class TargetsController extends Controller
         $this->destroyTargetAction = $destroyTargetAction;
     }
 
-
     public function index(Request $request)
     {
+
         // Search
-        $targets = $this->searchTargetQueryAction->execute($request);
+        $targets = $this->searchTargetQueryAction->execute($request)->with('creator');
 
         // Response
         $data = DataTables::of($targets)

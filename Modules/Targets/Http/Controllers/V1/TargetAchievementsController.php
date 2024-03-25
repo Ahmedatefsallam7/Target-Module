@@ -13,7 +13,6 @@ use Modules\Targets\Http\Controllers\Actions\TargetAchievement\DestroyTargetAchi
 use Modules\Targets\Http\Controllers\Actions\TargetAchievement\GetTargetAchievementByIdAction;
 use Modules\Targets\Http\Controllers\Actions\TargetAchievement\SearchTargetAchievementsQueryAction;
 
-
 class TargetAchievementsController extends Controller
 {
     use GeneralTrait;
@@ -38,7 +37,7 @@ class TargetAchievementsController extends Controller
     public function index(Request $request)
     {
         // Search
-        $achievements = $this->searchTargetAchievementsQueryAction->execute($request);
+        $achievements = $this->searchTargetAchievementsQueryAction->execute($request)->with('creator');
 
         // Response
         $data = DataTables::of($achievements)

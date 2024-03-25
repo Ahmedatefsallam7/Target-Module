@@ -12,17 +12,27 @@ class CreateTargetAchievementsTable extends Migration
     public function up(): void
     {
         Schema::create('target_achievements', function (Blueprint $table) {
-            $table->increments('id');
-            $table->unsignedInteger('user_id');
+            $table->bigIncrements('id');
+            $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
-            $table->unsignedInteger('target_id');
+            $table->bigInteger('target_id')->unsigned();
             $table->foreign('target_id')->references('id')->on('targets')->onDelete('cascade');
 
-            $table->double('achieved_amount')->default(0);
-            $table->double('percentage')->default(0);
-            $table->boolean('is_completed')->default(false);
+            $table->decimal('achieved_amount', 10, 2)->default(0);
+            $table->integer('percentage')->default(0);
+            $table->softDeletes();
             $table->timestamps();
+        });
+
+        // add user_stamps
+         Schema::table('target_achievements', function (Blueprint $table) {
+            $table->bigInteger('created_by')->unsigned()->nullable()->index()->after('created_at');
+            $table->foreign('created_by')->references('id')->on('users');
+            $table->bigInteger('updated_by')->unsigned()->nullable()->index()->after('updated_at');
+            $table->foreign('updated_by')->references('id')->on('users');
+            $table->bigInteger('deleted_by')->unsigned()->nullable()->index()->after('deleted_at');
+            $table->foreign('deleted_by')->references('id')->on('users');
         });
     }
 
@@ -31,6 +41,14 @@ class CreateTargetAchievementsTable extends Migration
      */
     public function down(): void
     {
+        Schema::table('target_achievements', function (Blueprint $table) {
+            $table->dropForeign(['created_by']);
+            $table->dropColumn('created_by');
+            $table->dropForeign(['updated_by']);
+            $table->dropColumn('updated_by');
+            $table->dropForeign(['deleted_by']);
+            $table->dropColumn('deleted_by');
+        });
         Schema::dropIfExists('target_achievements');
     }
 };

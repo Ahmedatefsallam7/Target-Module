@@ -21,7 +21,6 @@ class TargetAchievementResource extends Resource
             'target_id' => $this->target_id,
             'achieved_amount' => $this->achieved_amount,
             "percentage" => $this->percentage . " %",
-            'is_completed' => $this->is_completed,
             "target" => new TargetResource($this->target),
         ];
     }

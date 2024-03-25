@@ -5,28 +5,29 @@ namespace Modules\Targets\Entities;
 use Modules\Users\Entities\User;
 use Modules\Targets\Entities\Target;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Wildside\Userstamps\Userstamps;
 
-class TargetAchievement extends Model
-{
+class TargetAchievement extends Model {
 
-    /**
-     * The attributes that are mass assignable.
-     */
+    use Userstamps, SoftDeletes;
+
+    const CREATED_BY = 'created_by';
+    const UPDATED_BY = 'updated_by';
+    const DELETED_BY = 'deleted_by';
+
     protected $fillable = [
-        "user_id",
-        "target_id",
-        "achieved_amount",
-        "percentage",
-        'is_completed'
+        'user_id',
+        'target_id',
+        'achieved_amount',
+        'percentage',
     ];
 
-    function user()
-    {
-        return $this->belongsTo(User::class);
+    function user() {
+        return $this->belongsTo( User::class );
     }
 
-    function target()
-    {
-        return $this->belongsTo(Target::class);
+    function target() {
+        return $this->belongsTo( Target::class );
     }
 }
