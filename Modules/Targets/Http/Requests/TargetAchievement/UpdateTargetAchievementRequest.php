@@ -2,6 +2,7 @@
 
 namespace Modules\Targets\Http\Requests\TargetAchievement;
 
+use Modules\Targets\Entities\Target;
 use Illuminate\Foundation\Http\FormRequest;
 use Modules\Targets\Entities\TargetAchievement;
 
@@ -13,11 +14,10 @@ class UpdateTargetAchievementRequest extends FormRequest {
     public function rules(): array {
         $achievedTarget = TargetAchievement::query()->find( $this->id );
 
-        $amount =  $achievedTarget->target->amount ?? null;
+        $amount = Target::where( 'id', $achievedTarget->achievable_id )->value( 'amount' ) ?? null;
 
         return [
             'id' => 'required|integer|exists:target_achievements,id,deleted_at,NULL',
-            'user_id' => 'nullable|integer|exists:users,id,deleted_at,NULL',
             'target_id' => 'nullable|integer|exists:targets,id,deleted_at,NULL',
             'achieved_amount' => "required|integer|min:0|lte:$amount",
         ];

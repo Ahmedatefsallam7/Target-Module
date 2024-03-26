@@ -18,7 +18,8 @@ class StoreTargetAction
             // Store one target or more
             foreach ($data['targets'] as $targetData) {
                 $newTarget = Target::create([
-                    "user_id" => $targetData["user_id"],
+                    "targetable_type" =>"Modules\Users\Entities\User",
+                    "targetable_id" => $targetData["user_id"],
                     "subject" => $targetData["subject"],
                     "description" => $targetData["description"],
                     "type" => $targetData["type"],
@@ -30,8 +31,8 @@ class StoreTargetAction
 
                 // Create target achievement
                 TargetAchievement::create([
-                    "user_id" => $targetData["user_id"],
-                    "target_id" => $newTarget->id,
+                    "achievable_type" => "Modules\Targets\Entities\Target",
+                    "achievable_id" => $newTarget->id,
                 ]);
 
                 // Convert the created target into a resource

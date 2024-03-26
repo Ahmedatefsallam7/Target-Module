@@ -2,11 +2,12 @@
 
 namespace Modules\Targets\Entities;
 
-use Illuminate\Database\Eloquent\SoftDeletes;
-use Modules\Users\Entities\User;
-use Illuminate\Database\Eloquent\Model;
-use Modules\Targets\Entities\TargetAchievement;
 use Wildside\Userstamps\Userstamps;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Modules\Targets\Entities\TargetAchievement;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Target extends Model {
 
@@ -16,7 +17,8 @@ class Target extends Model {
     const DELETED_BY = 'deleted_by';
 
     protected $fillable = [
-        'user_id',
+        'targetable_type',
+        'targetable_id',
         'subject',
         'description',
         'type',
@@ -26,11 +28,12 @@ class Target extends Model {
         'end_date',
     ];
 
-    function user() {
-        return $this->belongsTo( User::class, 'user_id' );
+    public function targetable(): MorphTo {
+        return $this->morphTo();
     }
 
-    function target_achievements() {
-        return $this->hasMany( TargetAchievement::class );
+    public function targetAchievements(): MorphMany {
+        return $this->morphMany( TargetAchievement::class, 'achievable' );
+
     }
 }

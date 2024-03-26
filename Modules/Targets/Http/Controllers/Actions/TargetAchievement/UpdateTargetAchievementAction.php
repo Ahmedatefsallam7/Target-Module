@@ -2,27 +2,25 @@
 
 namespace Modules\Targets\Http\Controllers\Actions\TargetAchievement;
 
+use Modules\Targets\Entities\Target;
 use Modules\Targets\Entities\TargetAchievement;
 use Modules\Targets\Transformers\TargetAchievementResource;
 
-class UpdateTargetAchievementAction
-{
-    function execute($data)
-    {
-        $achievement = TargetAchievement::find($data['id']);
-
-        // Calculate the total achieved amount
-        $totalAchievedAmount = $data['achieved_amount'] + $achievement->achieved_amount;
+class UpdateTargetAchievementAction {
+    function execute( $data ) {
+        $achievement = TargetAchievement::find( $data[ 'id' ] );
 
         // Get the target amount
-        $targetAmount = $achievement->target->amount;
+        $targetAmount = Target::query()->where( 'id', $achievement->achievable_id )->value( 'amount' );
+
+        // Calculate the total achieved amount
+        $totalAchievedAmount = $data[ 'achieved_amount' ] + $achievement->achieved_amount;
 
         // Calculate the achieved amount considering the target limit
-        $achievedAmount = ($totalAchievedAmount > $targetAmount) ? $targetAmount : $totalAchievedAmount;
+        $achievedAmount = ( $totalAchievedAmount > $targetAmount ) ? $targetAmount : $totalAchievedAmount;
 
         // Calculate the percentage of achievement
-        $percentage = min(100, number_format(($achievedAmount / $targetAmount) * 100, 2));
-
+        $percentage = min( 100, number_format( ( $achievedAmount / $targetAmount ) * 100, 2 ) );
 
         // Prepare data for update
         $updateData = [
@@ -31,9 +29,9 @@ class UpdateTargetAchievementAction
         ];
 
         // Update the achievement with the new data
-        $achievement->update($updateData);
+        $achievement->update( $updateData );
 
         // return
-        return new TargetAchievementResource($achievement);
+        return new TargetAchievementResource( $achievement );
     }
 }

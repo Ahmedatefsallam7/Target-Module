@@ -7,6 +7,7 @@ use Modules\Users\Traits\GeneralTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Modules\Targets\Entities\TargetAchievement;
+use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class User extends Model {
     use  GeneralTrait, SoftDeletes;
@@ -21,11 +22,11 @@ class User extends Model {
         'department',
     ];
 
-    function targets() {
-        return $this->hasMany( Target::class );
+    public function targets(): MorphMany {
+        return $this->morphMany( Target::class, 'targetable' );
     }
 
-    function target_achievements() {
-        return $this->hasMany( TargetAchievement::class );
+    public function targetAchievements(): MorphMany {
+        return $this->morphMany( TargetAchievement::class, 'achievable' );
     }
 }

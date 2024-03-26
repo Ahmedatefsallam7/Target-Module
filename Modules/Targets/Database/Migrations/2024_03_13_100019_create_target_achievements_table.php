@@ -13,12 +13,7 @@ class CreateTargetAchievementsTable extends Migration
     {
         Schema::create('target_achievements', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('user_id')->unsigned();
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-
-            $table->bigInteger('target_id')->unsigned();
-            $table->foreign('target_id')->references('id')->on('targets')->onDelete('cascade');
-
+            $table->morphs('achievable');
             $table->decimal('achieved_amount', 10, 2)->default(0);
             $table->integer('percentage')->default(0);
             $table->softDeletes();

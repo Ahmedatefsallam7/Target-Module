@@ -7,18 +7,7 @@ use Modules\Users\Entities\User;
 class GetUserByIdAction {
     public function execute( $id ) {
         // Get User
-        $user = User::with( [
-            'targets',
-            'target_achievements' => function ( $q ) {
-                return $q->where( 'percentage', 100 );
-            }
-        ] )->withCount( [
-            'targets',
-            'target_achievements' => function ( $q ) {
-                return $q->where( 'percentage', 100 );
-            }
-        ] )
-        ->find( $id );
+        $user = User::with( [ 'targets' ] )->withCount( [ 'targets' ] )->find( $id );
 
         // return
         return $user;

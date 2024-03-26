@@ -16,8 +16,7 @@ class CreateTargetsTable extends Migration
 
     Schema::create('targets', function (Blueprint $table) use ($types, $durations) {
         $table->bigIncrements('id');
-        $table->bigInteger('user_id')->unsigned();
-        $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+        $table->morphs('targetable');
         $table->string('subject');
         $table->string('description');
         $table->enum('type', $types);
