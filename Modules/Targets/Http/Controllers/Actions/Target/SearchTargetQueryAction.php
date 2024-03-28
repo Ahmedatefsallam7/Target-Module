@@ -10,20 +10,32 @@ class SearchTargetQueryAction
     {
         $targets = Target::query();
 
-        // filter
-        if ($request->input('start_date') && $request->input('end_date')) {
-            $targets->whereBetween('start_date', [$request->input('start_date'), $request->input('end_date')]);
-        }
+        $this->applyFilters($targets, $request);
+        $this->applyOrdering($targets, $request);
+        $this->applySearch($targets, $request);
 
-        // order
-        if ($request->input('order_by') && $request->input('order_direction')) {
-            $targets->orderBy($request->input('order_by'), $request->input('order_direction'));
-        }
+        return $targets;
+    }
 
-        // search
-        if ($request->input('search')) {
+    private function applyFilters($query, $request)
+    {
+        if ($request->has(['start_date', 'end_date'])) {
+            $query->whereBetween('start_date', [$request->input('start_date'), $request->input('end_date')]);
+        }
+    }
+
+    private function applyOrdering($query, $request)
+    {
+        if ($request->has(['order_by', 'order_direction'])) {
+            $query->orderBy($request->input('order_by'), $request->input('order_direction'));
+        }
+    }
+
+    private function applySearch($query, $request)
+    {
+        if ($request->has('search')) {
             $searchTerm = $request->input('search');
-            $targets->where(function ($query) use ($searchTerm) {
+            $query->where(function ($query) use ($searchTerm) {
                 $query->where('subject', 'like', "%$searchTerm%")
                     ->orWhere('description', 'like', "%$searchTerm%")
                     ->orWhere('type', 'like', "%$searchTerm%")
@@ -33,8 +45,5 @@ class SearchTargetQueryAction
                     ->orWhere('end_date', 'like', "%$searchTerm%");
             });
         }
-
-
-        return $targets;
     }
 }
