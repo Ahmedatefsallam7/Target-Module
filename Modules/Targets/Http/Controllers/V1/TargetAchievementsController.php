@@ -33,7 +33,6 @@ class TargetAchievementsController extends Controller
         $this->destroyTargetAchievementAction = $destroyTargetAchievementAction;
     }
 
-
     public function index(Request $request)
     {
         // Search

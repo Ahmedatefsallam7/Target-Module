@@ -1,0 +1,1283 @@
+{
+	"info": {
+		"_postman_id": "f51dca20-54a3-4d1a-86b2-12ab63555462",
+		"name": "Target Module",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24047453"
+	},
+	"item": [
+		{
+			"name": "targets",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/api/targets/v1/targets"
+					},
+					"response": [
+						{
+							"name": "index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/targets/v1/targets"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:01:07 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:01:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"main.records_has_been_retrieved_successfully\",\n    \"data\": {\n        \"draw\": 0,\n        \"recordsTotal\": 6,\n        \"recordsFiltered\": 6,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"targetable_type\": \"Modules\\\\Users\\\\Entities\\\\User\",\n                \"targetable_id\": 1,\n                \"subject\": \"first subject\",\n                \"description\": \"fforth target description\",\n                \"type\": \"money\",\n                \"duration\": \"daily\",\n                \"amount\": \"15000.00\",\n                \"start_date\": \"2026-04-15\",\n                \"end_date\": null,\n                \"deleted_at\": null,\n                \"deleted_by\": null,\n                \"created_at\": \"Apr 1, 2024 | 09:57 AM\",\n                \"created_by\": null,\n                \"updated_at\": \"2024-04-01 09:57:05\",\n                \"updated_by\": null,\n                \"creator\": null\n            },\n            {\n                \"id\": 2,\n                \"targetable_type\": \"Modules\\\\Users\\\\Entities\\\\User\",\n                \"targetable_id\": 1,\n                \"subject\": \"second subject\",\n                \"description\": \"fforth target description\",\n                \"type\": \"calls\",\n                \"duration\": \"urban\",\n                \"amount\": \"500.00\",\n                \"start_date\": \"2026-04-15\",\n                \"end_date\": \"2026-04-30\",\n                \"deleted_at\": null,\n                \"deleted_by\": null,\n                \"created_at\": \"Apr 1, 2024 | 09:57 AM\",\n                \"created_by\": null,\n                \"updated_at\": \"2024-04-01 09:57:05\",\n                \"updated_by\": null,\n                \"creator\": null\n            },\n            {\n                \"id\": 3,\n                \"targetable_type\": \"Modules\\\\Users\\\\Entities\\\\User\",\n                \"targetable_id\": 2,\n                \"subject\": \"third subject\",\n                \"description\": \"forth target description\",\n                \"type\": \"calls\",\n                \"duration\": \"urban\",\n                \"amount\": \"500.00\",\n                \"start_date\": \"2026-04-15\",\n                \"end_date\": \"2026-04-30\",\n                \"deleted_at\": null,\n                \"deleted_by\": null,\n                \"created_at\": \"Apr 1, 2024 | 09:57 AM\",\n                \"created_by\": null,\n                \"updated_at\": \"2024-04-01 09:57:05\",\n                \"updated_by\": null,\n                \"creator\": null\n            },\n            {\n                \"id\": 4,\n                \"targetable_type\": \"Modules\\\\Users\\\\Entities\\\\User\",\n                \"targetable_id\": 2,\n                \"subject\": \"forth subject\",\n                \"description\": \"forth target description\",\n                \"type\": \"calls\",\n                \"duration\": \"urban\",\n                \"amount\": \"100.00\",\n                \"start_date\": \"2026-04-15\",\n                \"end_date\": \"2026-04-30\",\n                \"deleted_at\": null,\n                \"deleted_by\": null,\n                \"created_at\": \"Apr 1, 2024 | 09:57 AM\",\n                \"created_by\": null,\n                \"updated_at\": \"2024-04-01 09:57:05\",\n                \"updated_by\": null,\n                \"creator\": null\n            },\n            {\n                \"id\": 5,\n                \"targetable_type\": \"Modules\\\\Users\\\\Entities\\\\User\",\n                \"targetable_id\": 3,\n                \"subject\": \"fofrth subject\",\n                \"description\": \"forth target description\",\n                \"type\": \"Technical_support_tickets\",\n                \"duration\": \"daily\",\n                \"amount\": \"400.00\",\n                \"start_date\": \"2026-04-15\",\n                \"end_date\": \"2026-04-27\",\n                \"deleted_at\": null,\n                \"deleted_by\": null,\n                \"created_at\": \"Apr 1, 2024 | 09:57 AM\",\n                \"created_by\": null,\n                \"updated_at\": \"2024-04-01 09:57:05\",\n                \"updated_by\": null,\n                \"creator\": null\n            },\n            {\n                \"id\": 6,\n                \"targetable_type\": \"Modules\\\\Users\\\\Entities\\\\User\",\n                \"targetable_id\": 3,\n                \"subject\": \"six subject\",\n                \"description\": \"forth target description\",\n                \"type\": \"meetings\",\n                \"duration\": \"urban\",\n                \"amount\": \"500.00\",\n                \"start_date\": \"2026-04-15\",\n                \"end_date\": null,\n                \"deleted_at\": null,\n                \"deleted_by\": null,\n                \"created_at\": \"Apr 1, 2024 | 09:57 AM\",\n                \"created_by\": null,\n                \"updated_at\": \"2024-04-01 09:57:05\",\n                \"updated_by\": null,\n                \"creator\": null\n            }\n        ],\n        \"queries\": [\n            {\n                \"query\": \"select count(*) as aggregate from `targets` where `targets`.`deleted_at` is null\",\n                \"bindings\": [],\n                \"time\": 17.09\n            },\n            {\n                \"query\": \"select * from `targets` where `targets`.`deleted_at` is null\",\n                \"bindings\": [],\n                \"time\": 0.42\n            },\n            {\n                \"query\": \"select * from `users` where 0 = 1\",\n                \"bindings\": [],\n                \"time\": 0.35\n            }\n        ],\n        \"input\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/targets/v1/targets/1"
+					},
+					"response": [
+						{
+							"name": "show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/targets/v1/targets/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:01:20 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:01:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"main.record_has_been_retrieved_successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"user_id\": 1,\n        \"subject\": \"first subject\",\n        \"description\": \"fforth target description\",\n        \"type\": \"money\",\n        \"duration\": \"daily\",\n        \"amount\": \"15000.00\",\n        \"start_date\": \"2026-04-15\",\n        \"end_date\": null,\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Ahmed\",\n            \"email\": \"ahmed@gmail.com\",\n            \"phone\": \"01026556692\",\n            \"department\": \"Devst\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/targets/v1/targets/1"
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/targets/v1/targets/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:01:41 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:01:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"main.record_has_been_deleted_successfully\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "store and assign targets",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"targets\": [\r\n        {\r\n            \"user_id\": 1,\r\n            \"subject\": \"first subject\",\r\n            \"description\": \"fforth target description\",\r\n            \"type\": \"money\",\r\n            \"duration\": \"daily\",\r\n            \"amount\": 15000,\r\n            \"start_date\": \"2026-04-15\"\r\n        },\r\n        {\r\n            \"user_id\": 1,\r\n            \"subject\": \"second subject\",\r\n            \"description\": \"fforth target description\",\r\n            \"type\": \"calls\",\r\n            \"duration\": \"urban\",\r\n            \"amount\": 500,\r\n            \"start_date\": \"2026-04-15\",\r\n            \"end_date\": \"2026-04-30\"\r\n        },\r\n        {\r\n            \"user_id\": 2,\r\n            \"subject\": \"third subject\",\r\n            \"description\": \"forth target description\",\r\n            \"type\": \"calls\",\r\n            \"duration\": \"urban\",\r\n            \"amount\": 500,\r\n            \"start_date\": \"2026-04-15\",\r\n            \"end_date\": \"2026-04-30\"\r\n        },\r\n        {\r\n            \"user_id\": 2,\r\n            \"subject\": \"forth subject\",\r\n            \"description\": \"forth target description\",\r\n            \"type\": \"calls\",\r\n            \"duration\": \"urban\",\r\n            \"amount\": 100,\r\n            \"start_date\": \"2026-04-15\",\r\n            \"end_date\": \"2026-04-30\"\r\n        },\r\n        {\r\n            \"user_id\": 3,\r\n            \"subject\": \"fofrth subject\",\r\n            \"description\": \"forth target description\",\r\n            \"type\": \"Technical_support_tickets\",\r\n            \"duration\": \"daily\",\r\n            \"amount\": 400,\r\n            \"start_date\": \"2026-04-15\",\r\n            \"end_date\": \"2026-04-27\"\r\n        },\r\n        {\r\n            \"user_id\": 3,\r\n            \"subject\": \"six subject\",\r\n            \"description\": \"forth target description\",\r\n            \"type\": \"meetings\",\r\n            \"duration\": \"urban\",\r\n            \"amount\": 500,\r\n            \"start_date\": \"2026-04-15\"\r\n           \r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/targets/v1/targets"
+					},
+					"response": [
+						{
+							"name": "store and assign targets",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"targets\": [\r\n        {\r\n            \"user_id\": 1,\r\n            \"subject\": \"first subject\",\r\n            \"description\": \"fforth target description\",\r\n            \"type\": \"money\",\r\n            \"duration\": \"daily\",\r\n            \"amount\": 15000,\r\n            \"start_date\": \"2026-04-15\"\r\n        },\r\n        {\r\n            \"user_id\": 1,\r\n            \"subject\": \"second subject\",\r\n            \"description\": \"fforth target description\",\r\n            \"type\": \"calls\",\r\n            \"duration\": \"urban\",\r\n            \"amount\": 500,\r\n            \"start_date\": \"2026-04-15\",\r\n            \"end_date\": \"2026-04-30\"\r\n        },\r\n        {\r\n            \"user_id\": 2,\r\n            \"subject\": \"third subject\",\r\n            \"description\": \"forth target description\",\r\n            \"type\": \"calls\",\r\n            \"duration\": \"urban\",\r\n            \"amount\": 500,\r\n            \"start_date\": \"2026-04-15\",\r\n            \"end_date\": \"2026-04-30\"\r\n        },\r\n        {\r\n            \"user_id\": 2,\r\n            \"subject\": \"forth subject\",\r\n            \"description\": \"forth target description\",\r\n            \"type\": \"calls\",\r\n            \"duration\": \"urban\",\r\n            \"amount\": 100,\r\n            \"start_date\": \"2026-04-15\",\r\n            \"end_date\": \"2026-04-30\"\r\n        },\r\n        {\r\n            \"user_id\": 3,\r\n            \"subject\": \"fofrth subject\",\r\n            \"description\": \"forth target description\",\r\n            \"type\": \"Technical_support_tickets\",\r\n            \"duration\": \"daily\",\r\n            \"amount\": 400,\r\n            \"start_date\": \"2026-04-15\",\r\n            \"end_date\": \"2026-04-27\"\r\n        },\r\n        {\r\n            \"user_id\": 3,\r\n            \"subject\": \"six subject\",\r\n            \"description\": \"forth target description\",\r\n            \"type\": \"meetings\",\r\n            \"duration\": \"urban\",\r\n            \"amount\": 500,\r\n            \"start_date\": \"2026-04-15\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/targets/v1/targets"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 09:57:05 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 09:57:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"main.records_has_been_created_successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"user_id\": 1,\n            \"subject\": \"first subject\",\n            \"description\": \"fforth target description\",\n            \"type\": \"money\",\n            \"duration\": \"daily\",\n            \"amount\": 15000,\n            \"start_date\": \"2026-04-15\",\n            \"end_date\": null,\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Ahmed\",\n                \"email\": \"ahmed@gmail.com\",\n                \"phone\": \"01026556692\",\n                \"department\": \"Devst\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"user_id\": 1,\n            \"subject\": \"second subject\",\n            \"description\": \"fforth target description\",\n            \"type\": \"calls\",\n            \"duration\": \"urban\",\n            \"amount\": 500,\n            \"start_date\": \"2026-04-15\",\n            \"end_date\": \"2026-04-30\",\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Ahmed\",\n                \"email\": \"ahmed@gmail.com\",\n                \"phone\": \"01026556692\",\n                \"department\": \"Devst\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"user_id\": 2,\n            \"subject\": \"third subject\",\n            \"description\": \"forth target description\",\n            \"type\": \"calls\",\n            \"duration\": \"urban\",\n            \"amount\": 500,\n            \"start_date\": \"2026-04-15\",\n            \"end_date\": \"2026-04-30\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Ali\",\n                \"email\": \"ali@gmail.com\",\n                \"phone\": \"01236547892\",\n                \"department\": \"Devst\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"user_id\": 2,\n            \"subject\": \"forth subject\",\n            \"description\": \"forth target description\",\n            \"type\": \"calls\",\n            \"duration\": \"urban\",\n            \"amount\": 100,\n            \"start_date\": \"2026-04-15\",\n            \"end_date\": \"2026-04-30\",\n            \"user\": {\n                \"id\": 2,\n                \"name\": \"Ali\",\n                \"email\": \"ali@gmail.com\",\n                \"phone\": \"01236547892\",\n                \"department\": \"Devst\"\n            }\n        },\n        {\n            \"id\": 5,\n            \"user_id\": 3,\n            \"subject\": \"fofrth subject\",\n            \"description\": \"forth target description\",\n            \"type\": \"Technical_support_tickets\",\n            \"duration\": \"daily\",\n            \"amount\": 400,\n            \"start_date\": \"2026-04-15\",\n            \"end_date\": \"2026-04-27\",\n            \"user\": {\n                \"id\": 3,\n                \"name\": \"Saad\",\n                \"email\": \"saad@gmail.com\",\n                \"phone\": \"065894653156\",\n                \"department\": \"Devst\"\n            }\n        },\n        {\n            \"id\": 6,\n            \"user_id\": 3,\n            \"subject\": \"six subject\",\n            \"description\": \"forth target description\",\n            \"type\": \"meetings\",\n            \"duration\": \"urban\",\n            \"amount\": 500,\n            \"start_date\": \"2026-04-15\",\n            \"end_date\": null,\n            \"user\": {\n                \"id\": 3,\n                \"name\": \"Saad\",\n                \"email\": \"saad@gmail.com\",\n                \"phone\": \"065894653156\",\n                \"department\": \"Devst\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"start_date\": \"2024-4-1\",\r\n    \"end_date\": \"2024-4-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/targets/v1/targets/1"
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 1,\r\n    \"start_date\": \"2024-4-5\",\r\n    \"end_date\": \"2024-4-15\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/targets/v1/targets/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:03:46 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:03:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"main.record_has_been_updated_successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"user_id\": 1,\n        \"subject\": \"first subject\",\n        \"description\": \"fforth target description\",\n        \"type\": \"money\",\n        \"duration\": \"daily\",\n        \"amount\": \"15000.00\",\n        \"start_date\": \"2024-4-5\",\n        \"end_date\": \"2024-4-15\",\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"Ahmed\",\n            \"email\": \"ahmed@gmail.com\",\n            \"phone\": \"01026556692\",\n            \"department\": \"Devst\"\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/api/users/v1/users"
+					},
+					"response": [
+						{
+							"name": "index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/users/v1/users"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:03:02 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:03:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"main.records_has_been_retrieved_successfully\",\n    \"data\": {\n        \"draw\": 0,\n        \"recordsTotal\": 6,\n        \"recordsFiltered\": 6,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"name\": \"Ahmed\",\n                \"email\": \"ahmed@gmail.com\",\n                \"phone\": \"01026556692\",\n                \"department\": \"Devst\",\n                \"deleted_at\": null,\n                \"created_at\": \"Apr 1, 2024 | 10:02 AM\",\n                \"updated_at\": \"2024-04-01 10:02:54\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Ali\",\n                \"email\": \"ali@gmail.com\",\n                \"phone\": \"01236547892\",\n                \"department\": \"Devst\",\n                \"deleted_at\": null,\n                \"created_at\": \"Apr 1, 2024 | 10:02 AM\",\n                \"updated_at\": \"2024-04-01 10:02:54\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"Saad\",\n                \"email\": \"saad@gmail.com\",\n                \"phone\": \"065894653156\",\n                \"department\": \"Devst\",\n                \"deleted_at\": null,\n                \"created_at\": \"Apr 1, 2024 | 10:02 AM\",\n                \"updated_at\": \"2024-04-01 10:02:54\"\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Khaled\",\n                \"email\": \"khaled@gmail.com\",\n                \"phone\": \"15689656565\",\n                \"department\": \"Devst\",\n                \"deleted_at\": null,\n                \"created_at\": \"Apr 1, 2024 | 10:02 AM\",\n                \"updated_at\": \"2024-04-01 10:02:54\"\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Mohamed\",\n                \"email\": \"mohamed@gmail.com\",\n                \"phone\": \"156896566565\",\n                \"department\": \"Devst\",\n                \"deleted_at\": null,\n                \"created_at\": \"Apr 1, 2024 | 10:02 AM\",\n                \"updated_at\": \"2024-04-01 10:02:54\"\n            },\n            {\n                \"id\": 6,\n                \"name\": \"Mona\",\n                \"email\": \"mona@gmail.com\",\n                \"phone\": \"1546879465148\",\n                \"department\": \"Sales\",\n                \"deleted_at\": null,\n                \"created_at\": \"Apr 1, 2024 | 10:02 AM\",\n                \"updated_at\": \"2024-04-01 10:02:54\"\n            }\n        ],\n        \"queries\": [\n            {\n                \"query\": \"select count(*) as aggregate from `users` where `users`.`deleted_at` is null\",\n                \"bindings\": [],\n                \"time\": 20.22\n            },\n            {\n                \"query\": \"select * from `users` where `users`.`deleted_at` is null\",\n                \"bindings\": [],\n                \"time\": 0.34\n            }\n        ],\n        \"input\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/users/v1/users/1"
+					},
+					"response": [
+						{
+							"name": "show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/users/v1/users/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:03:12 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:03:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"main.record_has_been_retrieved_successfully\",\n    \"data\": {\n        \"id\": 5,\n        \"name\": \"Mohamed\",\n        \"email\": \"mohamed@gmail.com\",\n        \"phone\": \"156896566565\",\n        \"department\": \"Devst\",\n        \"deleted_at\": null,\n        \"created_at\": \"2024-04-01 10:02:54\",\n        \"updated_at\": \"2024-04-01 10:02:54\",\n        \"targets_count\": 0,\n        \"targets\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"phone\": \"+55632325635\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/users/v1/users/1"
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 3,\r\n    \"phone\": \"+55632325635\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/users/v1/users/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:03:20 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:03:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"main.record_has_been_updated_successfully\",\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"Saad\",\n        \"email\": \"saad@gmail.com\",\n        \"phone\": \"+55632325635\",\n        \"department\": \"Devst\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/users/v1/users/1"
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/users/v1/users/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:03:28 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:03:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"main.record_has_been_deleted_successfully\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"users\": [\r\n        {\r\n            \"name\": \"Ahmed\",\r\n            \"email\": \"ahmed@gmail.com\",\r\n            \"phone\": \"01026556692\",\r\n            \"department\": \"Devst\"\r\n        },\r\n        {\r\n            \"name\": \"Ali\",\r\n            \"email\": \"ali@gmail.com\",\r\n            \"phone\": \"01236547892\",\r\n            \"department\": \"Devst\"\r\n        },\r\n        {\r\n            \"name\": \"Saad\",\r\n            \"email\": \"saad@gmail.com\",\r\n            \"phone\": \"065894653156\",\r\n            \"department\": \"Devst\"\r\n        },\r\n        {\r\n            \"name\": \"Khaled\",\r\n            \"email\": \"khaled@gmail.com\",\r\n            \"phone\": \"15689656565\",\r\n            \"department\": \"Devst\"\r\n        },\r\n        {\r\n            \"name\": \"Mohamed\",\r\n            \"email\": \"mohamed@gmail.com\",\r\n            \"phone\": \"156896566565\",\r\n            \"department\": \"Devst\"\r\n        },\r\n        {\r\n            \"name\": \"Mona\",\r\n            \"email\": \"mona@gmail.com\",\r\n            \"phone\": \"1546879465148\",\r\n            \"department\": \"Sales\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/users/v1/users"
+					},
+					"response": [
+						{
+							"name": "store",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"users\": [\r\n        {\r\n            \"name\": \"Ahmed\",\r\n            \"email\": \"ahmed@gmail.com\",\r\n            \"phone\": \"01026556692\",\r\n            \"department\": \"Devst\"\r\n        },\r\n        {\r\n            \"name\": \"Ali\",\r\n            \"email\": \"ali@gmail.com\",\r\n            \"phone\": \"01236547892\",\r\n            \"department\": \"Devst\"\r\n        },\r\n        {\r\n            \"name\": \"Saad\",\r\n            \"email\": \"saad@gmail.com\",\r\n            \"phone\": \"065894653156\",\r\n            \"department\": \"Devst\"\r\n        },\r\n        {\r\n            \"name\": \"Khaled\",\r\n            \"email\": \"khaled@gmail.com\",\r\n            \"phone\": \"15689656565\",\r\n            \"department\": \"Devst\"\r\n        },\r\n        {\r\n            \"name\": \"Mohamed\",\r\n            \"email\": \"mohamed@gmail.com\",\r\n            \"phone\": \"156896566565\",\r\n            \"department\": \"Devst\"\r\n        },\r\n        {\r\n            \"name\": \"Mona\",\r\n            \"email\": \"mona@gmail.com\",\r\n            \"phone\": \"1546879465148\",\r\n            \"department\": \"Sales\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/users/v1/users"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:02:54 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:02:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"main.records_has_been_created_successfully\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Ahmed\",\n            \"email\": \"ahmed@gmail.com\",\n            \"phone\": \"01026556692\",\n            \"department\": \"Devst\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Ali\",\n            \"email\": \"ali@gmail.com\",\n            \"phone\": \"01236547892\",\n            \"department\": \"Devst\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Saad\",\n            \"email\": \"saad@gmail.com\",\n            \"phone\": \"065894653156\",\n            \"department\": \"Devst\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Khaled\",\n            \"email\": \"khaled@gmail.com\",\n            \"phone\": \"15689656565\",\n            \"department\": \"Devst\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Mohamed\",\n            \"email\": \"mohamed@gmail.com\",\n            \"phone\": \"156896566565\",\n            \"department\": \"Devst\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Mona\",\n            \"email\": \"mona@gmail.com\",\n            \"phone\": \"1546879465148\",\n            \"department\": \"Sales\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "achievements",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{url}}/api/achievements/v1/target-achievements"
+					},
+					"response": [
+						{
+							"name": "index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{url}}/api/achievements/v1/target-achievements"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:03:55 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:03:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "54"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"main.records_has_been_retrieved_successfully\",\n    \"data\": {\n        \"draw\": 0,\n        \"recordsTotal\": 6,\n        \"recordsFiltered\": 6,\n        \"data\": [\n            {\n                \"id\": 1,\n                \"achievable_type\": \"Modules\\\\Targets\\\\Entities\\\\Target\",\n                \"achievable_id\": 1,\n                \"achieved_amount\": \"0.00\",\n                \"percentage\": 0,\n                \"deleted_at\": null,\n                \"deleted_by\": null,\n                \"created_at\": \"Apr 1, 2024 | 10:03 AM\",\n                \"created_by\": null,\n                \"updated_at\": \"2024-04-01 10:03:40\",\n                \"updated_by\": null,\n                \"creator\": null\n            },\n            {\n                \"id\": 2,\n                \"achievable_type\": \"Modules\\\\Targets\\\\Entities\\\\Target\",\n                \"achievable_id\": 2,\n                \"achieved_amount\": \"0.00\",\n                \"percentage\": 0,\n                \"deleted_at\": null,\n                \"deleted_by\": null,\n                \"created_at\": \"Apr 1, 2024 | 10:03 AM\",\n                \"created_by\": null,\n                \"updated_at\": \"2024-04-01 10:03:40\",\n                \"updated_by\": null,\n                \"creator\": null\n            },\n            {\n                \"id\": 3,\n                \"achievable_type\": \"Modules\\\\Targets\\\\Entities\\\\Target\",\n                \"achievable_id\": 3,\n                \"achieved_amount\": \"0.00\",\n                \"percentage\": 0,\n                \"deleted_at\": null,\n                \"deleted_by\": null,\n                \"created_at\": \"Apr 1, 2024 | 10:03 AM\",\n                \"created_by\": null,\n                \"updated_at\": \"2024-04-01 10:03:40\",\n                \"updated_by\": null,\n                \"creator\": null\n            },\n            {\n                \"id\": 4,\n                \"achievable_type\": \"Modules\\\\Targets\\\\Entities\\\\Target\",\n                \"achievable_id\": 4,\n                \"achieved_amount\": \"0.00\",\n                \"percentage\": 0,\n                \"deleted_at\": null,\n                \"deleted_by\": null,\n                \"created_at\": \"Apr 1, 2024 | 10:03 AM\",\n                \"created_by\": null,\n                \"updated_at\": \"2024-04-01 10:03:40\",\n                \"updated_by\": null,\n                \"creator\": null\n            },\n            {\n                \"id\": 5,\n                \"achievable_type\": \"Modules\\\\Targets\\\\Entities\\\\Target\",\n                \"achievable_id\": 5,\n                \"achieved_amount\": \"0.00\",\n                \"percentage\": 0,\n                \"deleted_at\": null,\n                \"deleted_by\": null,\n                \"created_at\": \"Apr 1, 2024 | 10:03 AM\",\n                \"created_by\": null,\n                \"updated_at\": \"2024-04-01 10:03:40\",\n                \"updated_by\": null,\n                \"creator\": null\n            },\n            {\n                \"id\": 6,\n                \"achievable_type\": \"Modules\\\\Targets\\\\Entities\\\\Target\",\n                \"achievable_id\": 6,\n                \"achieved_amount\": \"0.00\",\n                \"percentage\": 0,\n                \"deleted_at\": null,\n                \"deleted_by\": null,\n                \"created_at\": \"Apr 1, 2024 | 10:03 AM\",\n                \"created_by\": null,\n                \"updated_at\": \"2024-04-01 10:03:40\",\n                \"updated_by\": null,\n                \"creator\": null\n            }\n        ],\n        \"queries\": [\n            {\n                \"query\": \"select count(*) as aggregate from `target_achievements` where `target_achievements`.`deleted_at` is null\",\n                \"bindings\": [],\n                \"time\": 1.95\n            },\n            {\n                \"query\": \"select * from `target_achievements` where `target_achievements`.`deleted_at` is null\",\n                \"bindings\": [],\n                \"time\": 0.35\n            },\n            {\n                \"query\": \"select * from `users` where 0 = 1\",\n                \"bindings\": [],\n                \"time\": 0.36\n            }\n        ],\n        \"input\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/achievements/v1/target-achievements/1"
+					},
+					"response": [
+						{
+							"name": "show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/achievements/v1/target-achievements/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:04:04 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:04:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "53"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"main.record_has_been_retrieved_successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"target_id\": 2,\n        \"achieved_amount\": \"0.00\",\n        \"percentage\": \"0 %\",\n        \"target\": {\n            \"id\": 2,\n            \"user_id\": 1,\n            \"subject\": \"second subject\",\n            \"description\": \"fforth target description\",\n            \"type\": \"calls\",\n            \"duration\": \"urban\",\n            \"amount\": \"500.00\",\n            \"start_date\": \"2026-04-15\",\n            \"end_date\": \"2026-04-30\",\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Ahmed\",\n                \"email\": \"ahmed@gmail.com\",\n                \"phone\": \"01026556692\",\n                \"department\": \"Devst\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/achievements/v1/target-achievements/1"
+					},
+					"response": [
+						{
+							"name": "delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/achievements/v1/target-achievements/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:04:22 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:04:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"main.record_has_been_deleted_successfully\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":2,\r\n    \"achieved_amount\":500000\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/api/achievements/v1/target-achievements/1"
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":1,\r\n    \"achieved_amount\":3000\r\n   \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{url}}/api/achievements/v1/target-achievements/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:04:13 +0000"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Apr 2024 10:04:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.2.5"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"main.record_has_been_updated_successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"target_id\": 1,\n        \"achieved_amount\": 3000,\n        \"percentage\": \"20.00 %\",\n        \"target\": {\n            \"id\": 1,\n            \"user_id\": 1,\n            \"subject\": \"first subject\",\n            \"description\": \"fforth target description\",\n            \"type\": \"money\",\n            \"duration\": \"daily\",\n            \"amount\": \"15000.00\",\n            \"start_date\": \"2024-04-05\",\n            \"end_date\": \"2024-04-15\",\n            \"user\": {\n                \"id\": 1,\n                \"name\": \"Ahmed\",\n                \"email\": \"ahmed@gmail.com\",\n                \"phone\": \"01026556692\",\n                \"department\": \"Devst\"\n            }\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}

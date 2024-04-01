@@ -64,7 +64,7 @@ class TargetsController extends Controller
         // Store
         $target = $this->storeTargetAction->execute($data);
 
-        $record = Str::plural('record', $target);
+        $record = Str::plural('record', count($target));
 
         // Response
         return $this->successResponse(__("main.{$record}_has_been_created_successfully"), $target);

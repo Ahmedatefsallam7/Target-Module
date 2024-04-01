@@ -54,11 +54,11 @@ class UsersController extends Controller
     {
         $data = $this->unsetNullValues($request->all());
 
-        $user = $this->userActions['store']->execute($data);
+        $users = $this->userActions['store']->execute($data);
 
-        $record = Str::plural('record', $user);
+        $record = Str::plural('record', count($users));
 
-        return $this->successResponse(__('main.' . $record . '_has_been_created_successfully'), $user);
+        return $this->successResponse(__('main.' . $record . '_has_been_created_successfully'), $users);
     }
 
     public function show(GetUserByIdRequest $request)
